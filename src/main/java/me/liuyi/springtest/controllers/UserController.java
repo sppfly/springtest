@@ -20,6 +20,11 @@ public class UserController {
     public void createUser(@RequestBody @Valid User user) {
         userRepository.save(user);
     }
+
+    @PutMapping
+    public void updateUser(@RequestBody @Valid User user) {
+        userRepository.save(user);
+    }
     
     @GetMapping("byId")
     public User getUser(@RequestParam Long id) {
